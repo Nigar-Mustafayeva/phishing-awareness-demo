@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Security Update Required</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: #f3f4f6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background: #fff;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+      width: 340px;
+      text-align: center;
+    }
+    .card h1 {
+      font-size: 18px;
+      margin-bottom: 8px;
+    }
+    .card p {
+      font-size: 13px;
+      color: #555;
+      margin-bottom: 20px;
+    }
+    input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    button {
+      width: 100%;
+      padding: 10px;
+      background: #2563eb;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .banner {
+      font-size: 12px;
+      color: #b91c1c;
+      margin-top: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Account Verification Required</h1>
+    <p>We noticed unusual sign-in activity. Please confirm your credentials to keep your account secure.</p>
+    <form action="/submit" method="POST">
+      <input type="hidden" name="rid" value="{{ rid }}">
+      <input type="email" name="email" placeholder="Work email" required>
+      <input type="password" name="password" placeholder="Password" required>
+      <button type="submit">Verify Account</button>
+    </form>
+    <div class="banner">This is a simulated phishing exercise environment.</div>
+  </div>
+</body>
+</html>
